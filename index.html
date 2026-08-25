@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farid Abdul Hakim — Profil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --stone:#EDEAE1;
+    --stone-dim:#E2DED2;
+    --ink:#20241F;
+    --ink-soft:#4A4F45;
+    --teal:#33564F;
+    --ochre:#B9832E;
+    --line:#C4BFAE;
+    --card:#F7F5EE;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--stone);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--teal); color:var(--stone);}
+
+  .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:26px 0;
+  }
+  .nav-mark{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+  }
+  .nav-links{display:flex; gap:28px; font-family:'IBM Plex Mono', monospace; font-size:13px;}
+  .nav-links a{text-decoration:none; color:var(--ink-soft); border-bottom:1px solid transparent; transition:border-color .2s;}
+  .nav-links a:hover, .nav-links a:focus-visible{border-color:var(--ochre); color:var(--ink);}
+
+  /* ---------- HERO / DOSSIER CARD ---------- */
+  header.hero{padding:40px 0 70px;}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:2px;
+    position:relative;
+    padding:44px 40px 36px;
+    transform:rotate(-0.4deg);
+    box-shadow:0 18px 40px -22px rgba(32,36,31,0.35);
+  }
+  .card::before{
+    content:"PROFIL — 001";
+    position:absolute; top:18px; right:22px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; letter-spacing:0.08em;
+    color:var(--ink-soft); opacity:0.55;
+  }
+  .card .field-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--teal);
+    display:block; margin-bottom:6px;
+  }
+  .card h1{
+    font-family:'Fraunces', serif;
+    font-weight:450;
+    font-size:clamp(40px, 7vw, 68px);
+    line-height:1.02;
+    letter-spacing:-0.01em;
+    border-bottom:2px solid var(--ink);
+    display:inline-block;
+    padding-bottom:6px;
+    margin-bottom:22px;
+  }
+  .card .role{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:20px;
+    color:var(--ink-soft);
+    margin-bottom:26px;
+  }
+  .meta-row{
+    display:flex; flex-wrap:wrap; gap:32px;
+    margin-top:28px; padding-top:22px;
+    border-top:1px dashed var(--line);
+  }
+  .meta-item{font-family:'IBM Plex Mono', monospace; font-size:13px;}
+  .meta-item .field-label{margin-bottom:4px;}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:56px 0;}
+  .section-head{
+    display:flex; align-items:baseline; gap:14px;
+    margin-bottom:26px;
+  }
+  .section-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--ochre);
+  }
+  .section-head h2{
+    font-family:'Fraunces', serif;
+    font-weight:450;
+    font-size:28px;
+  }
+  .rule{flex:1; height:1px; background:var(--line);}
+
+  #tentang p{
+    max-width:60ch;
+    color:var(--ink-soft);
+    font-size:16px;
+  }
+  #tentang p em{font-style:italic; color:var(--ink);}
+
+  /* karya grid */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .grid-item{
+    background:var(--stone);
+    padding:24px 22px;
+    transition:background .2s;
+  }
+  .grid-item:hover{background:var(--card);}
+  .grid-item .idx{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px; color:var(--teal); letter-spacing:0.08em;
+  }
+  .grid-item h3{
+    font-family:'Fraunces', serif;
+    font-weight:450;
+    font-size:19px;
+    margin:10px 0 8px;
+  }
+  .grid-item p{font-size:14px; color:var(--ink-soft);}
+
+  /* keahlian - tag list, no fake progress bars */
+  .tags{display:flex; flex-wrap:wrap; gap:10px;}
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    padding:7px 12px;
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+  }
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  footer{
+    padding:60px 0 50px;
+    border-top:1px solid var(--line);
+    margin-top:30px;
+  }
+  footer .big{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:clamp(26px,4vw,36px);
+    max-width:16ch;
+    margin-bottom:30px;
+  }
+  .contact-list{
+    display:flex; flex-wrap:wrap; gap:12px;
+  }
+  .contact-list a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    text-decoration:none;
+    padding:10px 16px;
+    border:1px solid var(--ink);
+    color:var(--ink);
+    transition:background .2s, color .2s;
+  }
+  .contact-list a:hover, .contact-list a:focus-visible{
+    background:var(--ink); color:var(--stone);
+  }
+  .copyright{
+    margin-top:40px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important;}
+  }
+  @media (max-width:640px){
+    .card{padding:32px 22px 28px; transform:none;}
+    .card::before{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <span class="nav-mark">FARID ABDUL HAKIM</span>
+    <div class="nav-links">
+      <a href="#tentang">Tentang</a>
+      <a href="#karya">Karya</a>
+      <a href="#keahlian">Keahlian</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="card">
+      <span class="field-label">Nama</span>
+      <h1>Farid Abdul Hakim</h1>
+      <p class="role">— Penulis, Content Creator & Petualang</p>
+
+      <div class="meta-row">
+        <div class="meta-item">
+          <span class="field-label">Lokasi</span>
+          Indonesia
+        </div>
+        <div class="meta-item">
+          <span class="field-label">Fokus</span>
+          Penulisan, Konten, Petualangan
+        </div>
+        <div class="meta-item">
+          <span class="field-label">Status</span>
+          Terbuka untuk kolaborasi
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="tentang">
+    <div class="section-head">
+      <span class="section-tag">Tentang</span>
+      <div class="rule"></div>
+    </div>
+    <p>
+      Saya Farid Abdul Hakim — <em>penulis, content creator, dan petualang</em>.
+      Menulis dan membuat konten adalah cara saya menangkap dan membagikan
+      pengalaman dari setiap perjalanan dan penjelajahan yang saya lakukan.
+      Bagi saya, cerita paling kuat lahir dari tempat-tempat yang jarang dijamah
+      dan kisah yang jarang diceritakan.
+    </p>
+  </section>
+
+  <section id="karya">
+    <div class="section-head">
+      <span class="section-tag">Karya</span>
+      <div class="rule"></div>
+    </div>
+    <div class="grid">
+      <div class="grid-item">
+        <span class="idx">01</span>
+        <h3>Pulau Sabira</h3>
+        <p>Penjaga Jakarta di Perbatasan Sumatra — buku karya Farid Abdul Hakim.</p>
+      </div>
+      <div class="grid-item">
+        <span class="idx">02</span>
+        <h3>[Judul karya/proyek berikutnya]</h3>
+        <p>[Deskripsi singkat 1–2 kalimat, atau link.]</p>
+      </div>
+      <div class="grid-item">
+        <span class="idx">03</span>
+        <h3>[Judul karya/proyek berikutnya]</h3>
+        <p>[Deskripsi singkat 1–2 kalimat, atau link.]</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="keahlian">
+    <div class="section-head">
+      <span class="section-tag">Keahlian</span>
+      <div class="rule"></div>
+    </div>
+    <div class="tags">
+      <span class="tag">Menulis</span>
+      <span class="tag">Public Speaking</span>
+      <span class="tag">Menjelajah</span>
+    </div>
+  </section>
+
+  <footer id="kontak">
+    <p class="big">Ingin kolaborasi, ngobrol soal tulisan, atau petualangan berikutnya? Sapa saya.</p>
+    <div class="contact-list">
+      <a href="mailto:faridabdulhakim1993@gmail.com">Email</a>
+      <a href="https://instagram.com/faridabdulhakim" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Farid Abdul Hakim. Dibuat dengan HTML statis, hosting gratis.</p>
+  </footer>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

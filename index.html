@@ -3,232 +3,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Farid Abdul Hakim — Profil</title>
+<title>Farid Abdul Hakim — Peta Jejak</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,650;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --stone:#E5DCC3;
-    --stone-dim:#DACBA5;
-    --ink:#2A2318;
-    --ink-soft:#5B4E38;
-    --teal:#2F4B3A;
-    --ochre:#8A5A2E;
-    --line:#C3B48B;
-    --card:#F3EDDA;
+    --bg:#0B0D09;
+    --panel:#14170F;
+    --panel-2:#191C13;
+    --paper:#EEE8D6;
+    --dim:#93907F;
+    --amber:#FFB020;
+    --flare:#FF5A2B;
+    --line:#33362A;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
   body{
     background:
-      radial-gradient(ellipse at top right, rgba(47,75,58,0.07), transparent 55%),
-      var(--stone);
-    background-attachment:fixed;
-    color:var(--ink);
+      radial-gradient(ellipse 55% 40% at 88% 10%, rgba(255,176,32,0.16), transparent 60%),
+      radial-gradient(ellipse 50% 35% at 8% 85%, rgba(255,90,43,0.10), transparent 60%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' preserveAspectRatio='xMidYMax slice'%3E%3Cg fill='%23FFB020'%3E%3Ccircle cx='120' cy='90' r='1.6' opacity='0.5'/%3E%3Ccircle cx='260' cy='140' r='1.2' opacity='0.35'/%3E%3Ccircle cx='380' cy='70' r='1.8' opacity='0.5'/%3E%3Ccircle cx='520' cy='160' r='1.2' opacity='0.3'/%3E%3Ccircle cx='640' cy='95' r='1.5' opacity='0.4'/%3E%3Ccircle cx='760' cy='150' r='1.2' opacity='0.3'/%3E%3Ccircle cx='860' cy='60' r='1.8' opacity='0.5'/%3E%3Ccircle cx='950' cy='190' r='1.3' opacity='0.35'/%3E%3Ccircle cx='1080' cy='100' r='1.6' opacity='0.45'/%3E%3Ccircle cx='1150' cy='170' r='1.2' opacity='0.3'/%3E%3Ccircle cx='40' cy='200' r='1.3' opacity='0.3'/%3E%3Ccircle cx='980' cy='260' r='1.1' opacity='0.25'/%3E%3C/g%3E%3Cg fill='%23120F0A'%3E%3Cpath d='M0 460 L90 400 L170 445 L260 385 L360 435 L470 395 L600 450 L740 400 L860 440 L980 390 L1090 435 L1200 405 L1200 800 L0 800 Z' fill-opacity='0.55'/%3E%3Cpath d='M0 520 L60 490 L140 515 L230 470 L340 510 L430 480 L540 520 L650 475 L760 515 L880 470 L1000 515 L1120 480 L1200 512 L1200 800 L0 800 Z' fill-opacity='0.8'/%3E%3C/g%3E%3Cg%3E%3Cpath d='M110 605 C 82 572, 120 540, 186 548 C 233 522, 308 527, 336 560 C 393 555, 430 588, 402 620 C 438 634, 430 665, 374 670 L 84 670 C 38 665, 38 623, 110 605 Z' fill='%23120F0A'/%3E%3Crect x='90' y='568' width='13' height='60' fill='%23120F0A'/%3E%3Cpath d='M87 568 L96 549 L106 568 Z' fill='%23FF5A2B'/%3E%3Ccircle cx='96' cy='559' r='4' fill='%23FFB020'%3E%3Canimate attributeName='opacity' values='0.4;1;0.4' dur='2.4s' repeatCount='indefinite'/%3E%3C/circle%3E%3C/g%3E%3Cg stroke='%23FFB020' stroke-opacity='0.12' stroke-width='2' fill='none'%3E%3Cpath d='M0 705 Q 60 693 120 705 T 240 705 T 360 705 T 480 705 T 600 705 T 720 705 T 840 705 T 960 705 T 1080 705 T 1200 705'/%3E%3Cpath d='M0 740 Q 60 727 120 740 T 240 740 T 360 740 T 480 740 T 600 740 T 720 740 T 840 740 T 960 740 T 1080 740 T 1200 740'/%3E%3C/g%3E%3C/svg%3E") bottom center / cover no-repeat,
+      var(--bg);
+    background-attachment:fixed, fixed, fixed, fixed;
+    color:var(--paper);
     font-family:'Inter',sans-serif;
-    line-height:1.5;
+    line-height:1.55;
+    position:relative;
   }
   a{color:inherit;}
-  ::selection{background:var(--teal); color:var(--stone);}
+  ::selection{background:var(--amber); color:var(--bg);}
 
-  .wrap{max-width:920px; margin:0 auto; padding:0 28px;}
+  .wrap{max-width:900px; margin:0 auto; padding:0 28px 0 64px; position:relative;}
+
+  .wrap::before{
+    content:"";
+    position:absolute; top:0; bottom:0; left:26px;
+    width:0; border-left:2px dashed var(--flare); opacity:0.7;
+  }
 
   /* ---------- NAV ---------- */
   nav{
     display:flex; justify-content:space-between; align-items:center;
-    padding:26px 0;
+    padding:26px 0 26px;
   }
   .nav-mark{
     font-family:'IBM Plex Mono', monospace;
-    font-size:13px;
-    letter-spacing:0.06em;
-    color:var(--ink-soft);
+    font-size:12.5px; letter-spacing:0.08em;
+    color:var(--paper);
   }
-  .nav-links{display:flex; gap:28px; font-family:'IBM Plex Mono', monospace; font-size:13px;}
-  .nav-links a{text-decoration:none; color:var(--ink-soft); border-bottom:1px solid transparent; transition:border-color .2s;}
-  .nav-links a:hover, .nav-links a:focus-visible{border-color:var(--ochre); color:var(--ink);}
+  .nav-links{display:flex; gap:26px; font-family:'IBM Plex Mono', monospace; font-size:12.5px;}
+  .nav-links a{text-decoration:none; color:var(--dim); border-bottom:1px solid transparent; transition:border-color .2s, color .2s;}
+  .nav-links a:hover, .nav-links a:focus-visible{border-color:var(--amber); color:var(--amber);}
 
-  /* ---------- HERO / DOSSIER CARD ---------- */
-  header.hero{padding:40px 0 70px;}
-  .card{
-    background-color:var(--card);
-    background-image:
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cg fill='none' stroke='%232F4B3A' stroke-opacity='0.10' stroke-width='1.4'%3E%3Cpath d='M-20 260 C 80 220, 140 300, 240 250 S 420 200, 460 260'/%3E%3Cpath d='M-20 300 C 90 265, 150 340, 250 295 S 430 245, 460 300'/%3E%3Cpath d='M-20 340 C 100 310, 160 375, 260 335 S 440 290, 460 340'/%3E%3Cpath d='M-20 220 C 70 185, 130 255, 230 205 S 410 160, 460 215'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat:no-repeat;
-    background-position:bottom right;
-    background-size:70% auto;
-    border:1px solid var(--line);
-    border-radius:2px;
-    position:relative;
-    padding:44px 40px 36px;
-    transform:rotate(-0.4deg);
-    box-shadow:0 18px 40px -22px rgba(32,35,24,0.4);
-    display:flex; flex-wrap:wrap; gap:32px; align-items:flex-start;
+  /* ---------- WAYPOINT MARKERS ---------- */
+  .waypoint{
+    position:absolute; left:26px; top:2px;
+    width:15px; height:15px; border-radius:50%;
+    background:var(--bg);
+    border:2.5px solid var(--flare);
+    transform:translateX(-50%);
+    box-shadow:0 0 12px rgba(255,90,43,0.55);
   }
-  .card::before{
-    content:"JEJAK — 01";
-    position:absolute; top:18px; right:22px;
+  .waypoint.start{background:var(--amber); border-color:var(--amber); box-shadow:0 0 16px rgba(255,176,32,0.7);}
+  .waypoint.end{
+    border-radius:2px; transform:translateX(-50%) rotate(45deg);
+    width:13px; height:13px; background:var(--amber); border-color:var(--amber);
+  }
+
+  .coord{
     font-family:'IBM Plex Mono', monospace;
     font-size:11px; letter-spacing:0.08em;
-    color:var(--ink-soft); opacity:0.55;
+    color:var(--amber);
+    margin-bottom:6px;
   }
-  .card-photo{
-    flex:0 0 auto;
-    width:104px; height:104px;
-    border-radius:50%;
-    border:2px solid var(--teal);
-    overflow:hidden;
-    display:flex; align-items:center; justify-content:center;
-    background:
-      repeating-linear-gradient(135deg, var(--stone-dim) 0 8px, var(--card) 8px 16px);
+
+  /* ---------- HERO / LEGEND ---------- */
+  header.hero{padding:34px 0 64px; position:relative;}
+  .legend{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:38px 34px 30px;
     position:relative;
+    box-shadow:0 24px 60px -24px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,176,32,0.05) inset;
   }
-  .card-photo img{width:100%; height:100%; object-fit:cover; display:block;}
-  .card-photo .ph-label{
+  .legend::before{
+    content:"PETA JEJAK";
+    position:absolute; top:16px; right:20px;
     font-family:'IBM Plex Mono', monospace;
-    font-size:9.5px; text-align:center; line-height:1.3;
-    color:var(--ink-soft); padding:0 10px;
+    font-size:10.5px; letter-spacing:0.14em;
+    color:var(--dim);
   }
-  .card-body{flex:1 1 320px; min-width:0;}
-  .card .field-label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
-    color:var(--teal);
-    display:block; margin-bottom:6px;
+  .legend-top{display:flex; gap:28px; align-items:flex-start; flex-wrap:wrap;}
+  .compass{flex:0 0 auto; width:64px; height:64px;}
+  .photo-pin{flex:0 0 auto; text-align:center;}
+  .photo-pin .ring{
+    width:100px; height:100px; border-radius:50%;
+    border:2.5px solid var(--amber);
+    overflow:hidden;
+    background:var(--panel-2);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 0 22px rgba(255,176,32,0.35);
   }
-  .card h1{
+  .photo-pin .ring img{width:100%; height:100%; object-fit:cover; display:block;}
+  .photo-pin .pin-tail{
+    width:0; height:0; margin:0 auto;
+    border-left:8px solid transparent; border-right:8px solid transparent;
+    border-top:12px solid var(--amber);
+  }
+  .legend-info{flex:1 1 280px; min-width:0;}
+  .legend h1{
     font-family:'Fraunces', serif;
-    font-weight:450;
-    font-size:clamp(36px, 6vw, 60px);
-    line-height:1.02;
+    font-weight:650;
+    font-size:clamp(34px, 6vw, 58px);
+    line-height:1.0;
     letter-spacing:-0.01em;
-    border-bottom:2px solid var(--ink);
-    display:inline-block;
-    padding-bottom:6px;
-    margin-bottom:22px;
+    margin-bottom:8px;
+    color:var(--paper);
   }
-  .card .role{
-    font-family:'Fraunces', serif;
-    font-style:italic;
-    font-size:20px;
-    color:var(--ink-soft);
-    margin-bottom:26px;
+  .legend .role{
+    font-family:'Fraunces', serif; font-style:italic; font-weight:500;
+    font-size:19px; color:var(--amber); margin-bottom:6px;
+  }
+  .legend-coords{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--flare);
   }
   .meta-row{
-    display:flex; flex-wrap:wrap; gap:32px;
-    margin-top:28px; padding-top:22px;
+    display:flex; flex-wrap:wrap; gap:30px;
+    margin-top:26px; padding-top:20px;
     border-top:1px dashed var(--line);
   }
-  .meta-item{font-family:'IBM Plex Mono', monospace; font-size:13px;}
-  .meta-item .field-label{margin-bottom:4px;}
+  .meta-item{font-family:'IBM Plex Mono', monospace; font-size:12.5px; color:var(--paper);}
+  .meta-item .field-label{
+    display:block; margin-bottom:4px;
+    font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase;
+    color:var(--amber);
+  }
 
   /* ---------- SECTIONS ---------- */
-  section{padding:56px 0;}
-  .section-head{
-    display:flex; align-items:baseline; gap:14px;
-    margin-bottom:26px;
-  }
-  .section-tag{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px; letter-spacing:0.1em; text-transform:uppercase;
-    color:var(--ochre);
-  }
+  section{padding:52px 0; position:relative;}
+  .section-head{margin-bottom:24px;}
   .section-head h2{
     font-family:'Fraunces', serif;
-    font-weight:450;
-    font-size:28px;
+    font-weight:650;
+    font-size:27px;
+    color:var(--paper);
   }
-  .rule{flex:1; height:1px; background:var(--line);}
+  .section-head .coord{margin-bottom:4px;}
 
   #tentang p{
     max-width:60ch;
-    color:var(--ink-soft);
+    color:var(--dim);
     font-size:16px;
   }
-  #tentang p em{font-style:italic; color:var(--ink);}
+  #tentang p em{font-style:italic; color:var(--amber); font-weight:500;}
 
-  /* karya grid */
   .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(230px,1fr));
-    gap:1px;
-    background:var(--line);
+    gap:20px;
+  }
+  .field-card{
+    background:var(--panel);
     border:1px solid var(--line);
+    padding:18px 18px 20px;
+    position:relative;
+    transition:border-color .2s, box-shadow .2s;
   }
-  .grid-item{
-    background:var(--stone);
-    padding:24px 22px;
-    transition:background .2s;
+  .field-card:hover{border-color:var(--amber); box-shadow:0 0 24px rgba(255,176,32,0.12);}
+  .field-card::after{
+    content:"";
+    position:absolute; inset:5px;
+    border:1px dashed var(--line);
+    pointer-events:none;
   }
-  .grid-item:hover{background:var(--card);}
-  .grid-cover{
+  .cover{
     width:100%; aspect-ratio:4/3;
     border:1px dashed var(--line);
     display:flex; align-items:center; justify-content:center;
-    background:repeating-linear-gradient(135deg, var(--stone-dim) 0 8px, var(--stone) 8px 16px);
+    background:var(--panel-2);
     margin-bottom:14px;
     overflow:hidden;
   }
-  .grid-cover img{width:100%; height:100%; object-fit:cover; display:block;}
-  .grid-cover span{
+  .cover img{width:100%; height:100%; object-fit:cover; display:block;}
+  .cover span{
     font-family:'IBM Plex Mono', monospace;
-    font-size:10.5px; color:var(--ink-soft); text-align:center; padding:0 12px;
+    font-size:10.5px; color:var(--dim); text-align:center; padding:0 12px;
   }
-  .grid-item .idx{
+  .field-card .idx{
     font-family:'IBM Plex Mono', monospace;
-    font-size:11px; color:var(--teal); letter-spacing:0.08em;
+    font-size:11px; color:var(--flare); letter-spacing:0.08em;
   }
-  .grid-item h3{
+  .field-card h3{
     font-family:'Fraunces', serif;
-    font-weight:450;
+    font-weight:650;
     font-size:19px;
-    margin:10px 0 8px;
+    margin:8px 0 8px;
+    color:var(--paper);
   }
-  .grid-item p{font-size:14px; color:var(--ink-soft);}
+  .field-card p{font-size:14px; color:var(--dim);}
 
-  /* keahlian - tag list, no fake progress bars */
   .tags{display:flex; flex-wrap:wrap; gap:10px;}
   .tag{
     font-family:'IBM Plex Mono', monospace;
     font-size:12.5px;
-    padding:7px 12px;
-    border:1px solid var(--line);
-    color:var(--ink-soft);
+    padding:7px 13px;
+    border:1px solid var(--amber);
+    background:transparent;
+    color:var(--amber);
   }
 
-  /* ---------- CONTACT / FOOTER ---------- */
-  footer{
-    padding:60px 0 50px;
-    border-top:1px solid var(--line);
-    margin-top:30px;
-  }
+  /* ---------- FOOTER ---------- */
+  footer{padding:56px 0 60px; position:relative;}
+  footer .coord{margin-bottom:10px;}
   footer .big{
     font-family:'Fraunces', serif;
-    font-style:italic;
-    font-size:clamp(26px,4vw,36px);
-    max-width:16ch;
-    margin-bottom:30px;
+    font-style:italic; font-weight:500;
+    font-size:clamp(24px,4vw,34px);
+    max-width:18ch;
+    margin-bottom:28px;
+    color:var(--paper);
   }
-  .contact-list{
-    display:flex; flex-wrap:wrap; gap:12px;
-  }
+  .contact-list{display:flex; flex-wrap:wrap; gap:12px;}
   .contact-list a{
     font-family:'IBM Plex Mono', monospace;
     font-size:13px;
     text-decoration:none;
     padding:10px 16px;
-    border:1px solid var(--ink);
-    color:var(--ink);
+    border:1px solid var(--amber);
+    color:var(--amber);
     transition:background .2s, color .2s;
   }
   .contact-list a:hover, .contact-list a:focus-visible{
-    background:var(--ink); color:var(--stone);
+    background:var(--amber); color:var(--bg);
   }
   .copyright{
-    margin-top:40px;
+    margin-top:36px;
     font-family:'IBM Plex Mono', monospace;
-    font-size:11.5px;
-    color:var(--ink-soft);
+    font-size:11px;
+    color:var(--dim);
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -236,9 +249,11 @@
     *{transition:none !important;}
   }
   @media (max-width:640px){
-    .card{padding:32px 22px 28px; transform:none;}
-    .card::before{display:none;}
-    .card{flex-direction:column; align-items:flex-start;}
+    .wrap{padding:0 20px 0 46px;}
+    .wrap::before{left:18px;}
+    .waypoint{left:18px;}
+    .legend{padding:28px 20px 24px;}
+    .legend::before{display:none;}
   }
 </style>
 </head>
@@ -256,29 +271,42 @@
   </nav>
 
   <header class="hero">
-    <div class="card">
-      <!-- Foto profil -->
-      <div class="card-photo">
-        <img src="foto-profil.jpg" alt="Foto Farid Abdul Hakim">
-      </div>
+    <span class="waypoint start"></span>
+    <div class="legend">
+      <div class="legend-top">
+        <svg class="compass" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="28" stroke="#FFB020" stroke-width="1.4" opacity="0.6"/>
+          <path d="M32 8 L37 30 L32 26 L27 30 Z" fill="#FF5A2B"/>
+          <path d="M32 56 L27 34 L32 38 L37 34 Z" fill="#93907F"/>
+          <circle cx="32" cy="32" r="2.4" fill="#FFB020"/>
+          <text x="32" y="18" font-family="IBM Plex Mono, monospace" font-size="6" fill="#EEE8D6" text-anchor="middle">U</text>
+        </svg>
 
-      <div class="card-body">
-        <span class="field-label">Nama</span>
-        <h1>Farid Abdul Hakim</h1>
-        <p class="role">— Penulis, Content Creator & Petualang</p>
+        <div class="photo-pin">
+          <div class="ring">
+            <img src="foto-profil.jpg" alt="Foto Farid Abdul Hakim">
+          </div>
+          <div class="pin-tail"></div>
+        </div>
 
-        <div class="meta-row">
-          <div class="meta-item">
-            <span class="field-label">Lokasi</span>
-            Indonesia
-          </div>
-          <div class="meta-item">
-            <span class="field-label">Fokus</span>
-            Penulisan, Konten, Petualangan
-          </div>
-          <div class="meta-item">
-            <span class="field-label">Status</span>
-            Terbuka untuk kolaborasi
+        <div class="legend-info">
+          <h1>Farid Abdul Hakim</h1>
+          <p class="role">Penulis, Content Creator & Petualang</p>
+          <p class="legend-coords">JEJAK.MULAI · INDONESIA</p>
+
+          <div class="meta-row">
+            <div class="meta-item">
+              <span class="field-label">Lokasi</span>
+              Indonesia
+            </div>
+            <div class="meta-item">
+              <span class="field-label">Fokus</span>
+              Penulisan, Konten, Petualangan
+            </div>
+            <div class="meta-item">
+              <span class="field-label">Status</span>
+              Terbuka untuk kolaborasi
+            </div>
           </div>
         </div>
       </div>
@@ -286,9 +314,10 @@
   </header>
 
   <section id="tentang">
+    <span class="waypoint"></span>
     <div class="section-head">
-      <span class="section-tag">Tentang</span>
-      <div class="rule"></div>
+      <p class="coord">TITIK 01</p>
+      <h2>Tentang</h2>
     </div>
     <p>
       Saya Farid Abdul Hakim — <em>penulis, content creator, dan petualang</em>.
@@ -300,27 +329,33 @@
   </section>
 
   <section id="karya">
+    <span class="waypoint"></span>
     <div class="section-head">
-      <span class="section-tag">Karya</span>
-      <div class="rule"></div>
+      <p class="coord">TITIK 02</p>
+      <h2>Karya</h2>
     </div>
     <div class="grid">
-      <div class="grid-item">
-        <!-- Sampul buku Pulau Sabira -->
-        <div class="grid-cover"><img src="cover-pulau-sabira.png" alt="Sampul buku Pulau Sabira"></div>
+      <div class="field-card">
+        <div class="cover"><img src="cover-pulau-sabira.png" alt="Sampul buku Pulau Sabira"></div>
         <span class="idx">01</span>
         <h3>Pulau Sabira</h3>
         <p>Penjaga Jakarta di Perbatasan Sumatra — buku karya Farid Abdul Hakim.</p>
       </div>
-      <div class="grid-item">
-        <div class="grid-cover"><span>Foto<br>karya</span></div>
+      <div class="field-card">
+        <div class="cover"><img src="cover-kabut-raung.png" alt="Sampul novel Di Balik Kabut Raung"></div>
         <span class="idx">02</span>
-        <h3>[Judul karya/proyek berikutnya]</h3>
-        <p>[Deskripsi singkat 1–2 kalimat, atau link.]</p>
+        <h3>Di Balik Kabut Raung</h3>
+        <p>Sebuah perjalanan tentang sabar, ikhtiar, dan takdir — novel karya Farid Abdul Hakim.</p>
       </div>
-      <div class="grid-item">
-        <div class="grid-cover"><span>Foto<br>karya</span></div>
+      <div class="field-card">
+        <div class="cover"><img src="cover-ifki.png" alt="Sampul novel IFKI - Riwayat yang Enggan Dikubur"></div>
         <span class="idx">03</span>
+        <h3>IFKI — Riwayat yang Enggan Dikubur</h3>
+        <p>Novel yang terinspirasi dari kisah luka yang terus diulang zaman — karya Farid Abdul Hakim.</p>
+      </div>
+      <div class="field-card">
+        <div class="cover"><span>Foto<br>karya</span></div>
+        <span class="idx">04</span>
         <h3>[Judul karya/proyek berikutnya]</h3>
         <p>[Deskripsi singkat 1–2 kalimat, atau link.]</p>
       </div>
@@ -328,9 +363,10 @@
   </section>
 
   <section id="keahlian">
+    <span class="waypoint"></span>
     <div class="section-head">
-      <span class="section-tag">Keahlian</span>
-      <div class="rule"></div>
+      <p class="coord">TITIK 03</p>
+      <h2>Keahlian</h2>
     </div>
     <div class="tags">
       <span class="tag">Menulis</span>
@@ -340,6 +376,8 @@
   </section>
 
   <footer id="kontak">
+    <span class="waypoint end"></span>
+    <p class="coord">TITIK AKHIR</p>
     <p class="big">Ingin kolaborasi, ngobrol soal tulisan, atau petualangan berikutnya? Sapa saya.</p>
     <div class="contact-list">
       <a href="mailto:faridabdulhakim1993@gmail.com">Email</a>

@@ -98,18 +98,18 @@
   .compass{flex:0 0 auto; width:64px; height:64px;}
   .photo-pin{flex:0 0 auto; text-align:center;}
   .photo-pin .ring{
-    width:100px; height:100px; border-radius:50%;
-    border:2.5px solid var(--amber);
+    width:170px; height:170px; border-radius:50%;
+    border:3px solid var(--amber);
     overflow:hidden;
     background:var(--panel-2);
     display:flex; align-items:center; justify-content:center;
-    box-shadow:0 0 22px rgba(255,176,32,0.35);
+    box-shadow:0 0 28px rgba(255,176,32,0.4);
   }
   .photo-pin .ring img{width:100%; height:100%; object-fit:cover; display:block;}
   .photo-pin .pin-tail{
     width:0; height:0; margin:0 auto;
-    border-left:8px solid transparent; border-right:8px solid transparent;
-    border-top:12px solid var(--amber);
+    border-left:11px solid transparent; border-right:11px solid transparent;
+    border-top:16px solid var(--amber);
   }
   .legend-info{flex:1 1 280px; min-width:0;}
   .legend h1{
@@ -289,6 +289,8 @@
     .waypoint{left:18px;}
     .legend{padding:28px 20px 24px;}
     .legend::before{display:none;}
+    .legend-top{justify-content:center; text-align:center;}
+    .photo-pin .ring{width:150px; height:150px;}
   }
 </style>
 </head>

@@ -94,34 +94,39 @@
     font-size:10.5px; letter-spacing:0.14em;
     color:var(--dim);
   }
-  .legend-top{display:flex; gap:28px; align-items:flex-start; flex-wrap:wrap;}
-  .compass{flex:0 0 auto; width:64px; height:64px;}
-  .photo-pin{flex:0 0 auto; text-align:center; position:relative; padding:14px;}
-  .photo-pin::before{
-    content:"";
-    position:absolute; top:-4px; left:-4px; right:-4px; bottom:22px;
-    background-image:url("latar-profil.png");
-    background-size:cover; background-position:center 20%;
-    filter:blur(14px) brightness(0.55) saturate(1.2);
-    transform:scale(1.25);
-    z-index:0;
-    border-radius:50%;
+  .legend-top{display:flex; flex-direction:column; gap:20px;}
+  .backdrop-photo{
+    width:100%;
+    aspect-ratio:16/8;
+    overflow:hidden;
+    position:relative;
+    border:1px solid var(--line);
   }
+  .backdrop-photo img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    object-position:center 30%;
+  }
+  .backdrop-photo::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(11,13,9,0.1) 0%, rgba(11,13,9,0.75) 100%);
+  }
+  .legend-headrow{display:flex; gap:28px; align-items:flex-start; flex-wrap:wrap;}
+  .compass{flex:0 0 auto; width:64px; height:64px;}
+  .photo-pin{flex:0 0 auto; text-align:center;}
   .photo-pin .ring{
-    width:170px; height:170px; border-radius:50%;
+    width:96px; height:96px; border-radius:50%;
     border:3px solid var(--amber);
     overflow:hidden;
     background:var(--panel-2);
     display:flex; align-items:center; justify-content:center;
     box-shadow:0 0 28px rgba(255,176,32,0.4);
-    position:relative; z-index:1;
   }
   .photo-pin .ring img{width:100%; height:100%; object-fit:cover; display:block;}
   .photo-pin .pin-tail{
     width:0; height:0; margin:0 auto;
-    border-left:11px solid transparent; border-right:11px solid transparent;
-    border-top:16px solid var(--amber);
-    position:relative; z-index:1;
+    border-left:8px solid transparent; border-right:8px solid transparent;
+    border-top:12px solid var(--amber);
   }
   .legend-info{flex:1 1 280px; min-width:0;}
   .legend h1{
@@ -324,25 +329,30 @@
     <span class="waypoint start"></span>
     <div class="legend">
       <div class="legend-top">
-        <svg class="compass" viewBox="0 0 64 64" fill="none">
-          <circle cx="32" cy="32" r="28" stroke="#FFB020" stroke-width="1.4" opacity="0.6"/>
-          <path d="M32 8 L37 30 L32 26 L27 30 Z" fill="#FF5A2B"/>
-          <path d="M32 56 L27 34 L32 38 L37 34 Z" fill="#93907F"/>
-          <circle cx="32" cy="32" r="2.4" fill="#FFB020"/>
-          <text x="32" y="18" font-family="IBM Plex Mono, monospace" font-size="6" fill="#EEE8D6" text-anchor="middle">U</text>
-        </svg>
-
-        <div class="photo-pin">
-          <div class="ring">
-            <img src="foto-profil.jpg" alt="Foto Farid Abdul Hakim">
-          </div>
-          <div class="pin-tail"></div>
+        <div class="backdrop-photo">
+          <img src="latar-profil.png" alt="Sampul buku Pulau Sabira">
         </div>
 
-        <div class="legend-info">
-          <h1>Farid Abdul Hakim</h1>
-          <p class="role">Penulis | Content Creator Dakwah | Pegiat Dakwah | Community Development | Pemerhati Masyarakat Pesisir & Kepulauan</p>
-          <p class="legend-coords">JEJAK.MULAI · INDONESIA</p>
+        <div class="legend-headrow">
+          <svg class="compass" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="28" stroke="#FFB020" stroke-width="1.4" opacity="0.6"/>
+            <path d="M32 8 L37 30 L32 26 L27 30 Z" fill="#FF5A2B"/>
+            <path d="M32 56 L27 34 L32 38 L37 34 Z" fill="#93907F"/>
+            <circle cx="32" cy="32" r="2.4" fill="#FFB020"/>
+            <text x="32" y="18" font-family="IBM Plex Mono, monospace" font-size="6" fill="#EEE8D6" text-anchor="middle">U</text>
+          </svg>
+
+          <div class="photo-pin">
+            <div class="ring">
+              <img src="foto-profil.jpg" alt="Foto Farid Abdul Hakim">
+            </div>
+            <div class="pin-tail"></div>
+          </div>
+
+          <div class="legend-info">
+            <h1>Farid Abdul Hakim</h1>
+            <p class="role">Penulis | Content Creator Dakwah | Pegiat Dakwah | Community Development | Pemerhati Masyarakat Pesisir & Kepulauan</p>
+            <p class="legend-coords">JEJAK.MULAI · INDONESIA</p>
 
           <div class="meta-row">
             <div class="meta-item">

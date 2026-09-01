@@ -96,7 +96,17 @@
   }
   .legend-top{display:flex; gap:28px; align-items:flex-start; flex-wrap:wrap;}
   .compass{flex:0 0 auto; width:64px; height:64px;}
-  .photo-pin{flex:0 0 auto; text-align:center;}
+  .photo-pin{flex:0 0 auto; text-align:center; position:relative; padding:14px;}
+  .photo-pin::before{
+    content:"";
+    position:absolute; top:-4px; left:-4px; right:-4px; bottom:22px;
+    background-image:url("latar-profil.png");
+    background-size:cover; background-position:center 20%;
+    filter:blur(14px) brightness(0.55) saturate(1.2);
+    transform:scale(1.25);
+    z-index:0;
+    border-radius:50%;
+  }
   .photo-pin .ring{
     width:170px; height:170px; border-radius:50%;
     border:3px solid var(--amber);
@@ -104,12 +114,14 @@
     background:var(--panel-2);
     display:flex; align-items:center; justify-content:center;
     box-shadow:0 0 28px rgba(255,176,32,0.4);
+    position:relative; z-index:1;
   }
   .photo-pin .ring img{width:100%; height:100%; object-fit:cover; display:block;}
   .photo-pin .pin-tail{
     width:0; height:0; margin:0 auto;
     border-left:11px solid transparent; border-right:11px solid transparent;
     border-top:16px solid var(--amber);
+    position:relative; z-index:1;
   }
   .legend-info{flex:1 1 280px; min-width:0;}
   .legend h1{
